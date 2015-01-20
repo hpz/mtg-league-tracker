@@ -13,9 +13,10 @@ $players->getAll();
 <html>
     <head>
     <title>Magic League</title>
-
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     </head>
     <body>
+		<div class="container">
     <h1>Magic League Standings</h1>
         <div class="report">
         <form action="" method="post">
@@ -37,7 +38,7 @@ $players->getAll();
         </form>
         </div>
         <div id="standings">
-        <table border="1">
+        <table border="1" class="table">
             <tr>
             <th>Player</th>
             <th>Points</th>
@@ -91,5 +92,8 @@ $players->getAll();
             </tr>
         </table>
         </div>
+			</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
