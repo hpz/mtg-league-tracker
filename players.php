@@ -28,8 +28,9 @@ $players->getAll();
     
 <?php } else { 
     if(isset($_POST['save']) && $_POST['save'] === 'true') {
+		var_dump($_POST);
         $player_name = isset($_POST['name']) ? $_POST['name'] : '';
-        
+        $seasons = new Seasons();
         $season = isset($_POST['season']) ? $_POST['season'] : '';
         switch($season) {
             case "current":
@@ -44,6 +45,7 @@ $players->getAll();
         }
         
         $players->savePlayer($player_name, $season_id);
+		$players->getAll();
     }?>
     <form action="" method="post" style="display: inline; margin-right: 10px;">
         <select name="season">

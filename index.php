@@ -8,6 +8,8 @@ $player_list = $db->dbc->players;
 $players = new Players();
 $players->getAll();
 
+if(!empty($_REQUEST["winner"]) && !empty($_REQUEST["loser"])) {
+}
 ?>
 <!DOCTYPE html>
 <html>

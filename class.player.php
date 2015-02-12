@@ -45,6 +45,20 @@ class Players{
         return $this->full_name;
     }
     
+	public function savePlayer($name, $season_id = '0') {
+		
+		$name_array = explode(' ', trim($name));
+		$first_name = array_shift($name_array);
+		$last_name = implode($name_array, ' ');
+		
+		$db_data = array(
+				"first_name" => $first_name,
+				"last_name" => $last_name
+		);
+		$playerdb = $this->db->dbc->players();
+		$result = $playerdb->insert($db_data);
+		
+	}
     /* public function get_all_players()
     {
         $players = array();
