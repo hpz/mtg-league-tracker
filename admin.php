@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Magic League Admin</title>    
-    </head>
-    <body>
+<?php require_once('header.php'); ?>
         <h1>Magic League Admin</h1>
     <ul>
         <li>
@@ -16,5 +11,4 @@
             <a href="games.php">Games</a>
         </li>
     </ul>
-    </body>
-</html>
+<?php require_once('footer.php'); ?>

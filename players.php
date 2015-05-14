@@ -4,12 +4,7 @@ require_once('config.php');
 $players = new Players();
 $players->getAll();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Magic League Admin - Players</title>
-</head>
-<body>
+<?php require_once('header.php'); ?>
     <h1>Magic League Admin - Players</h1>
 <?php if (isset($_GET['action']) && $_GET['action'] === 'addnew') { ?>
     <form action="players.php" method="post">
@@ -60,5 +55,4 @@ $players->getAll();
     } ?>
     </ul>
 <?php } ?>
-</body>
-</html>
+<?php require_once('footer.php'); ?>
