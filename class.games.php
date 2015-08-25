@@ -60,6 +60,10 @@ class Games {
 		return $result;
 	}
 	
+	public function save_points($player_id, $game_result) {
+		$prev_games = new Games();
+	}
+	
 	public function calcWeekPoints($start, $end, $playerID) {
 		
 	}
